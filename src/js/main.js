@@ -1,21 +1,25 @@
-const classHomeHeader = document.querySelector('[data-js=header_home]')
-const classHomeMain = document.querySelector('[data-js=main_home]')
+const classHomeHeader = getElement('[data-js=header_home]')
+const classHomeMain = getElement('[data-js=main_home]')
 
-const classBookmarksHeader = document.querySelector(
-  '[data-js=header_bookmarks]'
-)
-const classBookmarksMain = document.querySelector('[data-js=main_bookmarks]')
+const classBookmarksHeader = getElement('[data-js=header_bookmarks]')
+const classBookmarksMain = getElement('[data-js=main_bookmarks]')
 
-const classCreateHeader = document.querySelector('[data-js=header_create]')
-const classCreateMain = document.querySelector('[data-js=main_create]')
+const classCreateHeader = getElement('[data-js=header_create]')
+const classCreateMain = getElement('[data-js=main_create]')
 
-const classProfileHeader = document.querySelector('[data-js=header_profile]')
-const classProfileMain = document.querySelector('[data-js=main_profile]')
+const classProfileHeader = getElement('[data-js=header_profile]')
+const classProfileMain = getElement('[data-js=main_profile]')
 
-const btnHome = document.querySelector('[data-js=btn_home_nav]')
-const btnBookmarks = document.querySelector('[data-js=btn_bookmarks_nav]')
-const btnCreate = document.querySelector('[data-js=btn_create_nav]')
-const btnProfile = document.querySelector('[data-js=btn_profile_nav]')
+function getElement(selector) {
+  return document.querySelector(selector)
+}
+
+/* navigation__icon--active
+ */
+const btnHome = getElement('[data-js=btn_home_nav]')
+const btnBookmarks = getElement('[data-js=btn_bookmarks_nav]')
+const btnCreate = getElement('[data-js=btn_create_nav]')
+const btnProfile = getElement('[data-js=btn_profile_nav]')
 
 btnHome.addEventListener('click', () => {
   classHomeHeader.classList.remove('d-none')
@@ -75,8 +79,8 @@ btnProfile.addEventListener('click', () => {
 
 /* =====================BOOKMARKS========================= */
 
-const BookmarkFirst = document.querySelector('[data-js=bookmark_first]')
-const BookmarkSecond = document.querySelector('[data-js=bookmark_second]')
+const BookmarkFirst = getElement('[data-js=bookmark_first]')
+const BookmarkSecond = getElement('[data-js=bookmark_second]')
 
 BookmarkFirst.addEventListener('click', () => {
   BookmarkFirst.classList.toggle('card__bookmark-icon--active')
@@ -87,9 +91,35 @@ BookmarkSecond.addEventListener('click', () => {
 
 /* =====================ANSWER========================= */
 
-const btnShowAnswer = document.querySelector('[data-js=btnShowAnswerFirst]')
-const classAnswer = document.querySelector('[data-js=answerFirst]')
+const btnShowAnswer = getElement('[data-js=btnShowAnswerFirst]')
+const classAnswer = getElement('[data-js=answerFirst]')
 
 btnShowAnswer.addEventListener('click', () => {
   classAnswer.classList.toggle('d-none')
+})
+
+/* =====================CREATE========================= */
+
+const inputfieldQuestion = getElement('[data-js=inputfieldQuestion]')
+const inputfieldAnswer = getElement('[data-js=inputfieldAnswer]')
+const inputfieldTags = getElement('[data-js=inputfieldTas]')
+
+const btnSubmit = getElement('[data-js=btnSubmit]')
+
+/* btnSubmit.addEventListener('click', () => {
+  inputfieldQuestion.value = ''
+  inputfieldAnswer.value = ''
+  inputfieldTags.value = ''
+}) */
+
+/* btnSubmit.addEventListener('click', () => {
+  inputfieldQuestion.reset()
+  inputfieldAnswer.reset()
+  inputfieldTags.reset()
+}) */
+
+const entireForm = getElement('[data-js=entireForm]')
+
+btnSubmit.addEventListener('click', () => {
+  entireForm.reset()
 })
