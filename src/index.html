@@ -201,12 +201,10 @@
     </header>
 
     <main data-js="main_create" class="main-grid--1column d-none">
-      <form class="form" action="">
-        <label for="textarea1"
-          >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos
-          placeat, reiciendis natus dolor!</label
-        >
+      <form data-js="entireForm" class="form" action="">
+        <label for="textarea1" class="card__title">Question</label>
         <textarea
+          data-js="inputfieldQuestion"
           class="form__text-input"
           name="textarea1"
           id="textarea1"
@@ -215,11 +213,9 @@
           required
         ></textarea>
 
-        <label for="textarea2"
-          >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos
-          placeat, reiciendis natus dolor!</label
-        >
+        <label for="textarea2" class="card__title">Answer</label>
         <textarea
+          data-js="inputfieldAnswer"
           class="form__text-input"
           name="textarea2"
           id="textarea2"
@@ -228,11 +224,9 @@
           required
         ></textarea>
 
-        <label for="tags-input"
-          >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos
-          placeat, reiciendis natus dolor!</label
-        >
+        <label for="tags-input" class="card__title">Tags</label>
         <input
+          data-js="inputfieldTas"
           class="form__text-input"
           type="text"
           name="tags-input"
@@ -240,7 +234,12 @@
           required
         />
 
-        <input class="button" type="submit" value="Submit" />
+        <input
+          data-js="btnSubmit"
+          class="button"
+          type="button"
+          value="Submit"
+        />
       </form>
     </main>
     <!-- ==========================================PROFILE================================================== -->
