@@ -15,9 +15,12 @@
     </header>
 
     <main data-js="main_home" class="main-grid--1column">
+      <!-- ==================== FIRST CARD ===================== -->
+
       <section class="card">
         <h2 class="card__title">Question:</h2>
         <svg
+          data-js="bookmark_first"
           class="card__bookmark-icon"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -30,8 +33,8 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem non, architecto commodi quod id asper?
         </p>
-        <button class="button">Show Answer</button>
-        <p class="card__text d-none">
+        <button data-js="btnShowAnswerFirst" class="button">Show Answer</button>
+        <p data-js="answerFirst" class="card__text d-none">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem non, architecto commodi quod id asper?
         </p>
@@ -42,9 +45,13 @@
           <li class="tag-list__item">BEM</li>
         </ul>
       </section>
+
+      <!-- ==================== SECOND CARD ===================== -->
+
       <section class="card">
         <h2 class="card__title">Question:</h2>
         <svg
+          data-js="bookmark_second"
           class="card__bookmark-icon card__bookmark-icon--active"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -57,7 +64,9 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem non, architecto commodi quod id asper?
         </p>
-        <button class="button">Show Answer</button>
+        <button data-js="btnShowAnswerSecond" class="button">
+          Show Answer
+        </button>
         <p class="card__text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem non, architecto commodi quod id asper?
