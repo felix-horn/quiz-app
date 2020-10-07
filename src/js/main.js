@@ -72,3 +72,24 @@ btnProfile.addEventListener('click', () => {
   classProfileHeader.classList.remove('d-none')
   classProfileMain.classList.remove('d-none')
 })
+
+/* =====================BOOKMARKS========================= */
+
+const BookmarkFirst = document.querySelector('[data-js=bookmark_first]')
+const BookmarkSecond = document.querySelector('[data-js=bookmark_second]')
+
+BookmarkFirst.addEventListener('click', () => {
+  BookmarkFirst.classList.toggle('card__bookmark-icon--active')
+})
+BookmarkSecond.addEventListener('click', () => {
+  BookmarkSecond.classList.toggle('card__bookmark-icon--active')
+})
+
+/* =====================ANSWER========================= */
+
+const btnShowAnswer = document.querySelector('[data-js=btnShowAnswerFirst]')
+const classAnswer = document.querySelector('[data-js=answerFirst]')
+
+btnShowAnswer.addEventListener('click', () => {
+  classAnswer.classList.toggle('d-none')
+})
